@@ -1,13 +1,10 @@
-import serverless from "serverless-http";
+import dotenv from "dotenv";
 import app from "./server.js";
 
-// For Vercel
-export const handler = serverless(app);
+dotenv.config();
 
-// For local development
-if (process.env.NODE_ENV !== "production") {
-  const PORT = process.env.PORT || 5000;
-  app.listen(PORT, () => {
-    console.log(`✅ Server running locally on http://localhost:${PORT}`);
-  });
-}
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`✅ Server running on http://localhost:${PORT}`);
+});
