@@ -11,7 +11,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:3000",               // local React dev
-    "https://ai-code-comment-generator-o472-7d8mkh9z0-devs-projects-4e2f220a.vercel.app/" // deployed frontend
+    "https://ai-code-comment-generator-lkgb.vercel.app" // deployed frontend
   ],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
